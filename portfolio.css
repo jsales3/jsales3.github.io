@@ -1,0 +1,406 @@
+﻿body {
+    /*background-color: black;*/
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    /*grid-template-rows: 400px 400px 400px 400px 400px;*/
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+.header {
+    grid-column: 1 / span 11;
+    background-color: #440a0a;
+    
+    
+}
+
+/*body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}*/
+
+a {
+    color: white;
+}
+
+/* header */
+
+/*.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}*/
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #440a0a;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #440a0a;
+    text-decoration: none;
+}
+
+        .header li a:hover,
+        .header .menu-btn:hover {
+            background-color: slateblue;
+        }
+
+    .header #logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+        text-decoration: none;
+        color:white;
+    }
+
+    /* menu */
+
+    .header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+
+    }
+
+    /* menu icon */
+
+    .header .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+
+        .header .menu-icon .navicon {
+            background: white;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+            .header .menu-icon .navicon:before,
+            .header .menu-icon .navicon:after {
+                background: white;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+            }
+
+            .header .menu-icon .navicon:before {
+                top: 5px;
+            }
+
+            .header .menu-icon .navicon:after {
+                top: -5px;
+            }
+
+    /* menu btn */
+
+    .header .menu-btn {
+        display: none;
+    }
+
+        .header .menu-btn:checked ~ .menu {
+            max-height: 240px;
+        }
+
+        .header .menu-btn:checked ~ .menu-icon .navicon {
+            background: transparent;
+        }
+
+            .header .menu-btn:checked ~ .menu-icon .navicon:before {
+                transform: rotate(-45deg);
+            }
+
+            .header .menu-btn:checked ~ .menu-icon .navicon:after {
+                transform: rotate(45deg);
+            }
+
+        .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+        .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+        .header li a {
+            padding: 20px 30px;
+        }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+section.flex-item2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+    justify-content: space-around;
+    grid-column: 1 / span 11;
+    background-color: #406a7b;
+    height: 400px;
+}
+
+section.flex-item3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: 1 / span 11;
+    background-color: #775c52;
+    
+    /*height: 400px;*/
+}
+
+section.flex-item4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    grid-column: 1 / span 11;
+    background-color: #a1a59a;
+    height: 600px;
+}
+
+section.flex-item5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / span 11;
+    background-color: #666673;
+    height: 400px;
+}
+
+div.flex-item6 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    grid-column: 5 / span 5;
+    width: 1250px;
+    /*height: 200px;*/
+    border: solid;
+}
+
+div.flex-item7 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content:space-evenly;
+    grid-column: 5 / span 5;
+    width: 1349px;
+    height: 200px;
+    /*border: solid;*/
+}
+
+section.image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url('images/Jovon Sales Headshot.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+section.image2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url('images/fortuneTeller.png');
+    background-size: cover;
+    width: 320px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+section.image3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url('images/luckyNumbers.png');
+    background-size: cover;
+    width: 320px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+section.image4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url('images/virtualPet.png');
+    background-size: cover;
+    width: 320px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+
+
+#about-me {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content:space-around;
+}
+
+.title2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    width: 1225px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    color: black;
+    background-color: tan;
+    border: solid;
+    width: 118px;
+    height: 28px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* entire container, keeps perspective */ 
+
+.flip-container {
+    perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 320px;
+    height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    transform: rotateY(180deg);
+    text-align: center;
+    color: darkblue;
+    font: bold;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    text-align: center;
+    color: black;
+    font: bold;
+}
+
+.fab {
+    font-family: Font Awesome\ 5 Brands;
+    color:darkblue;
+}
+
+.fas {
+    font-family: Font Awesome\ 5 Free;
+    color: darkblue;
+}
+
+.email{
+    color:darkblue
+}
+
